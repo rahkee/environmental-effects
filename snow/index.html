@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Particle Effects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: "Six Caps", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #1a1a1a;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      position: relative;
+      width: 500px;
+      height: 500px;
+    }
+
+    canvas {
+      border: 1px solid #333;
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .overlay {
+      grid-column: 1;
+      grid-row: 1;
+      position: relative;
+      z-index: 10;
+      pointer-events: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay h1 {
+      font-size: 400px;
+      margin: 0;
+      line-height: 1;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <canvas id="particleCanvas" width="500" height="500"></canvas>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
